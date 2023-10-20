@@ -1,0 +1,24 @@
+:root {
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
+}
+
+h1,
+h2, p {
+  all: unset;
+}

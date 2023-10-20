@@ -1,0 +1,20 @@
+.banner {
+  padding: 30px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  background-color: #86D3F4;
+  width: 251px;
+  height: 357px;
+}
+
+.qrCode {
+  background-color: white;
+}
+
+.button {
+  width: 124px;
+}
