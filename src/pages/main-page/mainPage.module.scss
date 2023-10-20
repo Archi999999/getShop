@@ -1,0 +1,30 @@
+.page {
+  position: relative;
+  //transition: all 5s ease;
+}
+
+.video {
+}
+
+.banner {
+  position: absolute;
+  bottom: 144px;
+  left: 1280px;
+}
+.bannerVisible{
+  animation: bannerVisible 2.5s forwards;
+}
+
+@keyframes bannerVisible {
+  0% {left: 1280px}
+  100% {left: 1029px}
+}
+//
+//.bannerRemove {
+//  animation: bannerRemove 2.5s forwards;
+//}
+//
+//@keyframes bannerRemove {
+//  0% {left: 1029px}
+//  100% {left: 1270px}
+//}

@@ -1,3 +1,8 @@
-export function App () {
-    return <div>Hello</div>
+import {MainPage} from "./pages/main-page/main-page.tsx";
+
+export function App() {
+    return (
+        <MainPage/>
+)
 }
+

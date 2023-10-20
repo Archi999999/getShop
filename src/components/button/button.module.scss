@@ -1,0 +1,23 @@
+.button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  border: 2px black solid;
+  padding: 16px;
+
+  &:disabled {
+    border: 1px solid #4E4E4E;
+    color: #4E4E4E;
+  }
+
+  &:hover, &:focus {
+    background-color: black;
+    color: #86D3F4;
+  }
+
+  &:active {
+    background: #1b2f33;
+  }
+}
