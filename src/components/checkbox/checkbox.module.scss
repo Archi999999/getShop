@@ -2,6 +2,8 @@
   display: flex;
   width: 284px;
   gap: 10px;
+  margin-top: 23px;
+  margin-bottom: 13px;
 }
 
 .label {
@@ -12,9 +14,10 @@
   display: flex;
   align-items: center;
   text-align: start;
-  &:focus &:hover {
-    background-color: black;
-    color: white;
+
+  &:active {
+    background-color: #4E4E4E;
+    color: #86D3F4;
   }
 }
 
@@ -23,17 +26,11 @@
   position: absolute;
   width: 1px;
   margin: 0;
-}
 
-.checkbox {
-  border: 2px black solid;
-  width: 55px;
-  height: 40px;
-  margin: 10px;
-}
-
-.activeCheckbox {
-  background-color: black;
+  &:focus + label {
+    background-color: black;
+    color: #86D3F4;
+  }
 }
 
 .checkMark {

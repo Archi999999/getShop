@@ -1,6 +1,6 @@
 import s from './checkbox.module.scss'
 import {FC, useState} from "react";
-import {CheckMark} from "../../assets/check-mark.tsx";
+import {CheckMark} from "../../assets/svg-icons/check-mark.tsx";
 
 type Props = {
     id: string
@@ -21,8 +21,8 @@ export const Checkbox: FC<Props> = (
 
     return (
         <div className={s.checkboxContainer}>
+            <CheckMark className={`${s.checkMark} ${isChecked? s.activeCheckMark : ''}`} onClick={checkHandler}/>
             <input type={'checkbox'} id={id} className={s.input} onChange={()=>setIsChecked(!isChecked)} checked={isChecked === true}/>
-                <CheckMark className={`${s.checkMark} ${isChecked? s.activeCheckMark : ''}`} onClick={checkHandler}/>
             <label className={s.label} htmlFor={id}>
                 {label}
             </label>

@@ -1,7 +1,7 @@
 import Wrapper from "../../components/wrapper/wrapper.tsx";
 import {Button} from "../../components/button/button.tsx";
 import s from './form-page.module.scss'
-import {Cross} from "../../assets/cross/cross.tsx";
+import {Cross} from "../../assets/svg-icons/cross.tsx";
 import {Panel} from "../../components/panel/panel.tsx";
 
 export const FormPage = () => {

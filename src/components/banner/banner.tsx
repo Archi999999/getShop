@@ -1,5 +1,5 @@
 import s from './banner.module.scss'
-import {QrCode} from "../../assets/qr-code/qr-code.tsx";
+import {QrCode} from "../../assets/svg-icons/qr-code.tsx";
 import {Button} from "../button/button.tsx";
 import {FC} from "react";
 
