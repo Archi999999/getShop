@@ -1,0 +1,52 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 13px;
+  background-color: #86D3F4;
+  width: 380px;
+  height: 100%;
+  padding: 40px 24px;
+}
+
+.telInput {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+
+}
+
+.buttons {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttonsRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.num {
+  padding: 12px 30px;
+  font-weight: 600;
+  width: 88px;
+  height: 52px;
+}
+
+.buttonRemove {
+  box-sizing: border-box;
+  width: 186px;
+  height: 52px;
+  font-weight: 600;
+}
+
+.confirmButton {
+  width: 284px;
+  height: 52px;
+}

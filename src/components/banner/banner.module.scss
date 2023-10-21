@@ -17,4 +17,8 @@
 
 .button {
   width: 124px;
+
+  &:hover, &:active{
+    color: #86D3F4;
+  }
 }
