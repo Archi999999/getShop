@@ -1,8 +1,8 @@
-import {MainPage} from "./pages/main-page/main-page.tsx";
+import {FormPage} from "./pages/form-page/form-page.tsx";
 
 export function App() {
     return (
-        <MainPage/>
+        <FormPage/>
 )
 }
 
