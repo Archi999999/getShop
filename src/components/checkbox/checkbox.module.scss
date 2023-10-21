@@ -1,0 +1,45 @@
+.checkboxContainer {
+  display: flex;
+  width: 284px;
+  gap: 10px;
+}
+
+.label {
+  color: #565656;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  &:focus &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.checkbox {
+  border: 2px black solid;
+  width: 55px;
+  height: 40px;
+  margin: 10px;
+}
+
+.activeCheckbox {
+  background-color: black;
+}
+
+.checkMark {
+  color: #86D3F4;
+}
+
+.activeCheckMark {
+  color: black;
+}
