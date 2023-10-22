@@ -1,6 +1,6 @@
 import s from './banner.module.scss'
 import {QrCode} from "../../assets/svg-icons/qr-code.tsx";
-import {Button} from "../button/button.tsx";
+import {Button} from "../panel/button/button.tsx";
 import {FC} from "react";
 
 type Props = {
