@@ -1,9 +1,9 @@
 import {FC, RefObject} from "react";
-import {PanelButton} from "../../panel-button/panel-button.tsx";
+import {PanelButton} from "../panel-button/panel-button.tsx";
 import s from "../panel.module.scss";
 
 type Props = {
-    values: number[] | string[]
+    values: Array<number | "СТЕРЕТЬ">
     inputRef: RefObject<HTMLInputElement>
 }
 
@@ -16,7 +16,7 @@ export const ButtonsRow: FC<Props> = (
     return (
         <div className={s.buttonsRow}>
             {values.map(el => (
-                <PanelButton value={el} inputRef={inputRef} key={el}/>
+                <PanelButton value={el} inputRef={inputRef} key={el} className={el === "СТЕРЕТЬ"? s.buttonRemove: ''}/>
             ))
             }
         </div>

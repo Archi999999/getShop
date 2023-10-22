@@ -11,7 +11,7 @@
   padding: 40px 24px;
 }
 
-.buttons {
+.nums {
   display: flex;
   padding: 20px 0;
   flex-direction: column;
@@ -33,9 +33,7 @@
 }
 
 .buttonRemove {
-  box-sizing: border-box;
-  width: 186px;
-  height: 52px;
+  width: 186px !important;
 }
 
 .confirmButton {

@@ -62,6 +62,6 @@ export const InputPhone:FC<Props> = (
 
     return (
         <InputMask mask={'+7(___)___-__-__'} replacement={{_: /\d/}} showMask onFocus={handleInputFocus} ref={inputRef}
-                   className={s.telInput}/>
+                   className={s.telInput} id={'inputPhone'}/>
     )
 }
