@@ -6,16 +6,30 @@
 }
 
 .label {
-  color: #565656;
+  color: inherit;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   display: flex;
   align-items: center;
   text-align: start;
+  pointer-events: none;
+  //cursor: pointer;
 
   &:active {
     background-color: #4E4E4E;
+    color: #86D3F4;
+  }
+}
+
+.checkBtn {
+  width: 100% !important;
+  padding: 0 !important;
+  height: 40px !important;
+  color: #565656;
+  border: none !important;
+
+  &:hover{
     color: #86D3F4;
   }
 }
@@ -26,6 +40,7 @@
   width: 1px;
   margin: 0;
 
+
   &:focus + label {
     background-color: black;
     color: #86D3F4;
@@ -34,6 +49,7 @@
 
 .checkMark {
   color: #86D3F4;
+  cursor: pointer;
 }
 
 .activeCheckMark {

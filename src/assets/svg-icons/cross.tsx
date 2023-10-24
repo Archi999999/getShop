@@ -1,5 +1,5 @@
 export const Cross = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={88} height={52} >
+    <svg xmlns="http://www.w3.org/2000/svg" width={88} height={52} style={{position: 'relative', top: '-16px', left: '-17px'}}>
             <path
                 stroke="currentColor"
                 strokeWidth={3}

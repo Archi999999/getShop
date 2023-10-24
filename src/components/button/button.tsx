@@ -1,23 +1,22 @@
-import {ComponentProps, FC, ReactNode} from "react";
+import {ComponentPropsWithRef, FC, forwardRef, ReactNode} from "react";
 import s from './button.module.scss'
 
 type Props = {
     children: ReactNode
     className?: string
-    onClick: ()=>void
-} & ComponentProps<'button'>
+} & ComponentPropsWithRef<'button'>
 
-export const Button: FC<Props> = (
+export const Button: FC<Props> = forwardRef<HTMLButtonElement, Props>((
     {
         children,
         className,
-        onClick,
         ...rest
-    }
+    },
+    ref
 ) => {
     return (
-        <button className={`${s.button} ${className}`} onClick={onClick} {...rest}>
+        <button className={`${s.button} ${className}`} ref={ref} {...rest}>
             {children}
         </button>
     );
-};
+})

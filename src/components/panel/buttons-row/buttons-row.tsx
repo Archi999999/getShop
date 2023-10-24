@@ -1,22 +1,20 @@
-import {FC, RefObject} from "react";
-import {PanelButton} from "../panel-button/panel-button.tsx";
+import {FC} from "react";
 import s from "../panel.module.scss";
+import {ButtonWithNavigate} from "../panel-button/button-with-navigate.tsx";
+import {KeysBtnRefs} from "../../../navigation-utils/navigation-utils.ts";
 
-type Props = {
-    values: Array<number | "СТЕРЕТЬ">
-    inputRef: RefObject<HTMLInputElement>
-}
+type Props = {values: Array<KeysBtnRefs>}
 
 export const ButtonsRow: FC<Props> = (
     {
         values,
-        inputRef
     }
 ) => {
     return (
         <div className={s.buttonsRow}>
             {values.map(el => (
-                <PanelButton value={el} inputRef={inputRef} key={el} className={el === "СТЕРЕТЬ"? s.buttonRemove: ''}/>
+                    <ButtonWithNavigate value={el} key={el}
+                                 className={el === "СТЕРЕТЬ"? s.buttonRemove: ''}/>
             ))
             }
         </div>

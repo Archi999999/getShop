@@ -1,6 +1,7 @@
 .formPage {
   display: flex;
   justify-content: space-between;
+  background-image: url("../../../public/backGround_2_page.jpg");
 }
 
 .closeButton {
@@ -10,13 +11,14 @@
   height: 52px;
   padding: 0;
 
+
   &:hover {
     color: white;
   }
 }
 
-.qrCode {
-  width: 110px;
-  height: 110px;
-  background-color: white;
-}
+//.qrCode {
+//  width: 110px;
+//  height: 110px;
+//  background-color: white;
+//}
