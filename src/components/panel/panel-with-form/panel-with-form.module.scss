@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nums {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttonsRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.num {
+  padding: 12px 30px;
+  font-weight: 600;
+  width: 88px;
+  height: 52px;
+}
+
+.buttonRemove {
+  width: 186px !important;
+}
+
+.confirmButton {
+  width: 284px !important;
+}

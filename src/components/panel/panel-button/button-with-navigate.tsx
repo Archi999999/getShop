@@ -8,6 +8,7 @@ type Props = {
     children?: ReactNode
     value: KeysBtnRefs
     className?: string
+    setPhoneNumber?:(value:string)=>void
 } & ComponentPropsWithRef<'button'>
 
 export const ButtonWithNavigate: FC<Props> = (
@@ -15,6 +16,7 @@ export const ButtonWithNavigate: FC<Props> = (
         children,
         value,
         className,
+        setPhoneNumber,
         ...rest
     }
 ) => {
@@ -28,11 +30,13 @@ export const ButtonWithNavigate: FC<Props> = (
             const currentValue = inputPhone.current.value
             const digitValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
             if (digitValues.includes(value)) {
-                inputPhone.current.value = currentValue.replace("_", value.toString());
+                // inputPhone.current.value = currentValue.replace("_", value);
+                setPhoneNumber && setPhoneNumber(currentValue.replace("_", value))
             } else if (value === 'СТЕРЕТЬ') {
                 const lastDigitIndex = findLastDigitIndex(currentValue);
                 if (lastDigitIndex > 1) {
-                    inputPhone.current.value = currentValue.slice(0, lastDigitIndex) + '_' + currentValue.slice(lastDigitIndex + 1);
+                    // inputPhone.current.value = currentValue.slice(0, lastDigitIndex) + '_' + currentValue.slice(lastDigitIndex + 1)
+                    setPhoneNumber && setPhoneNumber(currentValue.slice(0, lastDigitIndex) + '_' + currentValue.slice(lastDigitIndex + 1))
                 }
             }
         }
@@ -52,7 +56,6 @@ export const ButtonWithNavigate: FC<Props> = (
 
     const navigateHandler = (e: KeyboardEvent<HTMLButtonElement | HTMLInputElement>) => {
         const paths = btnPaths[value]
-        console.log(e.key)
         switch (e.key) {
             case 'ArrowUp': {
                 btnRefs && btnRefs[paths.up].current?.focus()
@@ -73,9 +76,8 @@ export const ButtonWithNavigate: FC<Props> = (
         }
     }
 
-
     return (
-        <Button onClick={onClickHandler} className={`${s.num} ${className}`} onKeyDown={e=>navigateHandler(e)}
+        <Button type={'button'} onClick={onClickHandler} className={`${s.num} ${className}`} onKeyDown={e=>navigateHandler(e)}
                 ref={btnRef} {...rest}>
             {children || value}
         </Button>
