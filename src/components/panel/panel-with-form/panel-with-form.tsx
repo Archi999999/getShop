@@ -22,7 +22,7 @@ export const PanelWithForm:FC<Props> = ({setIsSubmitted}) => {
             const unmaskedValue = phoneNumber.replace(/[^0-9]+/g, '').substring(1)
             const param = {
                 'url': 'https://phonevalidation.abstractapi.com/v1/',
-                'api_key': process.env.API_KEY,
+                'api_key': import.meta.env.VITE_API_KEY,
                 'phone' : unmaskedValue,
             };
 
