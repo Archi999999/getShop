@@ -10,6 +10,11 @@
   &:disabled {
     border: 1px solid #4E4E4E;
     color: #4E4E4E;
+    &:hover, &:focus {
+      background-color: #4E4E4E;
+      color: #1b2f33;
+      cursor:default;
+    }
   }
 
   &:hover, &:focus {
