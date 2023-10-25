@@ -5,13 +5,15 @@ import {BtnRefsContext} from "../../App.tsx";
 
 type Props = {
     phoneNumber: string
+    className: string
     setPhoneNumber: (value:string)=>void
 }
 
 export const InputPhone:FC<Props> = (
     {
         phoneNumber,
-        setPhoneNumber
+        className,
+        setPhoneNumber,
     }
 ) => {
     const btnRefs = useContext(BtnRefsContext)
@@ -23,6 +25,6 @@ export const InputPhone:FC<Props> = (
 
     return (
         <InputMask mask={'+7(___)___-__-__'} replacement={{_: /\d/}} showMask value={phoneNumber} onChange={onChangeHandler} ref={inputPhoneRef as RefObject<HTMLInputElement>}
-                   className={s.telInput} id={'inputPhone'}/>
+                   className={`${className} ${s.telInput}`} id={'inputPhone'}/>
     )
 }
