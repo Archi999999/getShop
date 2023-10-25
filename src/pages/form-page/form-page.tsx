@@ -7,10 +7,11 @@ import {PanelFinal} from "../../components/panel/panel-final/panel-final.tsx";
 import {FC, useState} from "react";
 
 type Props = {
+    setIsForm: (value:boolean)=>void
     className?: string
 }
 
-export const FormPage:FC<Props> = ({className}) => {
+export const FormPage:FC<Props> = ({ setIsForm, className}) => {
     const [isSubmitted, setIsSubmitted] = useState(false)
 
     return (
@@ -18,7 +19,7 @@ export const FormPage:FC<Props> = ({className}) => {
             {
                 isSubmitted
                 ? <PanelFinal/>
-                : <PanelWithForm setIsSubmitted={setIsSubmitted} />
+                : <PanelWithForm setIsSubmitted={setIsSubmitted} setIsForm={setIsForm}/>
             }
             <ButtonWithNavigate onClick={() => {}} className={s.closeButton}
                     value={'closeBtn'}>

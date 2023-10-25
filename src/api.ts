@@ -4,7 +4,7 @@ const param = {
 };
 export const phoneValidate = async (phone: string) => {
     try {
-        const res = await fetch(`${param.url}?api_key=${param.api_key}&phone=${phone}`);
+        const res = await fetch(`${param.url}?api_key=${param.api_key}&phone=${phone}&country=RU`);
         const data: ResponseType = await res.json();
         return data
     } catch (error) {

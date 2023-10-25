@@ -15,7 +15,7 @@ export function App() {
         <BtnRefsContext.Provider value={btnRefs}>
             {
                 isForm
-                ? <FormPage className={s.formPage}/>
+                ? <FormPage className={s.formPage} setIsForm={setIsForm}/>
                 : <MainPage onClick={()=>{setIsForm(true)}} className={s.mainPage}/>
             }
         </BtnRefsContext.Provider>
