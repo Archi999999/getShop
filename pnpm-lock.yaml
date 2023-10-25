@@ -8,9 +8,6 @@ dependencies:
   '@react-input/mask':
     specifier: ^1.0.20
     version: 1.0.20(@types/react@18.2.30)(react-dom@18.2.0)(react@18.2.0)
-  '@types/react-input-mask':
-    specifier: ^3.0.4
-    version: 3.0.4
   dotenv:
     specifier: ^16.3.1
     version: 16.3.1
@@ -20,9 +17,6 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
-  react-input-mask:
-    specifier: ^2.0.4
-    version: 2.0.4(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@types/node':
@@ -677,12 +671,6 @@ packages:
     dependencies:
       '@types/react': 18.2.30
     dev: true
-
-  /@types/react-input-mask@3.0.4:
-    resolution: {integrity: sha512-7seCjKB+bRttL51c3xDlzh62cDABQc0rzlAXduWirFZdg7Wx7mxRDdviSSUpkU4ON8NTFxiPHOi4w+pk1U31sg==}
-    dependencies:
-      '@types/react': 18.2.30
-    dev: false
 
   /@types/react@18.2.30:
     resolution: {integrity: sha512-OfqdJnDsSo4UNw0bqAjFCuBpLYQM7wvZidz0hVxHRjrEkzRlvZL1pJVyOSY55HMiKvRNEo9DUBRuEl7FNlJ/Vg==}
@@ -1390,12 +1378,6 @@ packages:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
     dev: true
 
-  /invariant@2.2.4:
-    resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
-    dependencies:
-      loose-envify: 1.4.0
-    dev: false
-
   /is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
@@ -1651,18 +1633,6 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-input-mask@2.0.4(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-1hwzMr/aO9tXfiroiVCx5EtKohKwLk/NT8QlJXHQ4N+yJJFyUuMT+zfTpLBwX/lK3PkuMlievIffncpMZ3HGRQ==}
-    peerDependencies:
-      react: '>=0.14.0'
-      react-dom: '>=0.14.0'
-    dependencies:
-      invariant: 2.2.4
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      warning: 4.0.3
-    dev: false
-
   /react-refresh@0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
@@ -1890,12 +1860,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
-
-  /warning@4.0.3:
-    resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
-    dependencies:
-      loose-envify: 1.4.0
-    dev: false
 
   /which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}

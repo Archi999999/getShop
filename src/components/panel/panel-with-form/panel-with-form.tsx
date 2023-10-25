@@ -28,7 +28,7 @@ export const PanelWithForm:FC<Props> = ({setIsSubmitted}) => {
 
             (async () => {
                 try {
-                    const res = await fetch(`${param.url}?api_key=${param.api_key}&phone=${param.phone}`);
+                    const res = await fetch(`${param.url}?api_key=${param.api_key}&phone=${param.phone}&country=RU`);
                     const data: ResponseType = await res.json();
                     if (data.valid) {
                         console.log(`submit tel: ${unmaskedValue} confirm: ${isConfirm}`);
