@@ -10,7 +10,7 @@ export const Video: FC<Props> = (
 ) => {
     return (
             <video autoPlay muted width='100%' height='auto' loop className={className} >
-                <source src='../../../public/video-main-page.mp4' type='video/mp4'/>
+                <source src='/video-main-page.mp4' type='video/mp4'/>
             </video>
     );
 };

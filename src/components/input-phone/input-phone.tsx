@@ -19,7 +19,6 @@ export const InputPhone:FC<Props> = (
 
     const onChangeHandler = (e:ChangeEvent<HTMLInputElement>) => {
         setPhoneNumber(e.currentTarget.value)
-        console.log(e.currentTarget.value)
     }
 
     return (
