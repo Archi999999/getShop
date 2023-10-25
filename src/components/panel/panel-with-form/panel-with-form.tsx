@@ -1,5 +1,5 @@
 import s from './panel-with-form.module.scss'
-import {FC, MouseEvent, useEffect, useState} from 'react'
+import {FC, MouseEvent, useState} from 'react'
 import {Checkbox} from "../../checkbox/checkbox.tsx";
 import {InputPhone} from "../../input-phone/input-phone.tsx";
 import {ButtonsRow} from "../buttons-row/buttons-row.tsx";
@@ -8,40 +8,14 @@ import {Panel} from "../panel.tsx";
 import {phoneValidate} from "../../../api.ts";
 
 type Props = {
-    setIsForm: (value:boolean)=>void
     setIsSubmitted: (value:boolean)=>void
 }
 
-export const PanelWithForm:FC<Props> = ({setIsForm, setIsSubmitted}) => {
+export const PanelWithForm:FC<Props> = ({setIsSubmitted}) => {
     const [isConfirm, setIsConfirm] = useState<boolean>(false)
     const [phoneNumber, setPhoneNumber] = useState('+7(___)___-__-__')
     const [isValidPhone, setIsValidPhone] = useState(true)
     const [disabledBtn, setDisabledBtn] = useState(true)
-
-    useEffect(() => {
-        let timeoutId: NodeJS.Timeout
-        const resetTimeout = () => {
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => {
-                setIsForm(false);
-            }, 10000);
-        };
-
-        const onUserActivity = () => {
-            resetTimeout();
-        };
-
-        resetTimeout();
-
-        window.addEventListener('mousemove', onUserActivity);
-        window.addEventListener('keydown', onUserActivity);
-
-        return () => {
-            clearTimeout(timeoutId);
-            window.removeEventListener('mousemove', onUserActivity);
-            window.removeEventListener('keydown', onUserActivity);
-        };
-    }, []);
 
     const onSubmitHandler = async (e:MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
